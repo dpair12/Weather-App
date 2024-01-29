@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="m-5">
+<div class="content">
+<h1>Weather Dashboard</h1>
+</div>
+</header>
+
+<main class="has-background-info" id="main-content">
+<div class="columns m-4" id="main-content-wrap">
+
+
+
+<!-- Search Section -->
+<section class="column is-one-fifth" id="Search-Section">
+
+<div class="box">
+<div class="content">
+<!-- Search Bar to Enter City Name -->
+<section id="searchbar">
+<form class="mb-6">
+<div class="field has-addons">
+<div class="control">
+<input class="input mb-2" type="text" id="search-input" placeholder="Enter City">
+</div>
+<div class="control">
+<input class="button is-info" type="submit" value="See Forecast">
+</div>
+</div>
+</form> 
+</section>
+<!-- Previous Searches (Appended Below Search Bar with up to 8 things) -->
+<section id="Previous">
+<h2>Previous Searches</h2>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button1"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button2"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button3"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button4"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button5"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button6"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button7"></button>
+<button class="button is-info is-fullwidth mb-3" style="display: none;" id="button8"></button>
+</section>
+
+</div>   
+</div>
+
+</section>
+
+
+<section class="column is-four-fifths">
+
+<!-- City Container -->
+<section id="City-Container">
+<div class="box mb-6">
+<div class="content">
+<!-- Shows City Name based on what was inputed into Search Bar-->
+<h1 id="City-Name"></h1>
+<!-- Image Displaying Current Weather Status-->
+<img class="mb-5" id="current">
+<!-- Current Temperature -->
+<p class="mb-5 has-text-weight-bold" id="current-temp"></p>
+<!-- Current Humidity -->
+<p class="mb-5 has-text-weight-bold" id="current-humidity"></p>
+<!-- Current Wind Speed -->
+<p class="has-text-weight-bold" id="current-wind"></p>
+</div>
+</div>
+</section>
+
+<!-- 5 Day Forecast for Search Result-->
+<section id="5Day-Forecast">
+<div class="box">
+<div class="columns mb-4">
+
+<!-- Day 1-->
+<section class="column is-one-fifth" id="Day1">
+<div class="content">
+<!-- Date -->
+<h1 id="Date1"></h1>
+<!-- Image Showing Estimated Weather Status -->
+<img class="mb-5" id="1">
+<!-- Estimate Temperature -->
+<p class="mb-5 has-text-weight-bold" id="Temp1"></p>
+<!-- Estimate Wind Speed -->
+<p class="mb-5 has-text-weight-bold" id="Wind1"></p>
+<!-- Estimate Humidity -->
+<p class="has-text-weight-bold" id="Humid1"></p>
+</div>
+</section>
+
+<!-- Day 2-->
+<section class="column is-one-fifth" id="Day2">
+<div class="content">
+<!-- Date -->
+<h1 id="Date2"></h1>
+<!-- Image Showing Estimated Weather Status -->
+<img class="mb-5" id="2">
+<!-- Estimate Temperature -->
+<p class="mb-5 has-text-weight-bold" id="Temp2"></p>
+<!-- Estimate Wind Speed -->
+<p class="mb-5 has-text-weight-bold" id="Wind2"></p>
+<!-- Estimate Humidity -->
+<p class="has-text-weight-bold" id="Humid2"></p>  
+</div>
+</section>
+
+<!-- Day 3-->
+<section class="column is-one-fifth " id="Day3">
+<div class="content">
+<!-- Date -->
+<h1 id="Date3"></h1>
+<!-- Image Showing Estimated Weather Status -->
+<img class="mb-5" id="3">
+<!-- Estimate Temperature -->
+<p class="mb-5 has-text-weight-bold" id="Temp3"></p>
+<!-- Estimate Wind Speed -->
+<p class="mb-5 has-text-weight-bold" id="Wind3"></p>
+<!-- Estimate Humidity -->
+<p class="has-text-weight-bold"  id="Humid3"></p>
+</div>
+</section>
+
+<!-- Day 4-->
+<section class="column is-one-fifth " id="Day4">
+<div class="content">
+<!-- Date -->
+<h1 id="Date4"></h1>
+<!-- Image Showing Estimated Weather Status -->
+<img class="mb-5" id="4">
+<!-- Estimate Temperature -->
+<p class="mb-5 has-text-weight-bold" id="Temp4"></p>
+<!-- Estimate Wind Speed -->
+<p class="mb-5 has-text-weight-bold" id="Wind4"></p>
+<!-- Estimate Humidity -->
+<p class="has-text-weight-bold" id="Humid4"></p>
+</div>
+</section>
+
+<!-- Day 5-->
+<section class="column is-one-fifth " id="Day5">
+<div class="content">
+<!-- Date -->
+<h1 id="Date5"></h1>
+<!-- Image Showing Estimated Weather Status -->
+<img class="mb-5" id="5">
+<!-- Estimate Temperature -->
+<p class="mb-5 has-text-weight-bold" id="Temp5"></p>
+<!-- Estimate Wind Speed -->
+<p class="mb-5 has-text-weight-bold" id="Wind5"></p>
+<!-- Estimate Humidity -->
+<p class="has-text-weight-bold" id="Humid5"></p>
+</div>
+</section>
+
+</div>
+</div>
+</section>
+
+
+
+
+</div>
+
+
+</main>
+<!-- Day Js Link -->
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+<!-- Link to JavaScript File-->
+<script src="./Assets/js/results.js"></script>
+</body>
+</html>
