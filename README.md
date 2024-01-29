@@ -8,7 +8,7 @@ Created two html documents, one for the homepage and one for the application its
 
 # GIF of Deployed Application
 
-[](https://github.com/dpair12/Weather-App/blob/main/Assets/images/Demo.gif)
+![](https://github.com/dpair12/Weather-App/blob/main/Assets/images/Demo.gif)
 
 # Link to Live Application
 
