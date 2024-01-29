@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bulma Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+<!-- Header -->
+<header class="m-5">
+<div class="content">
+<h1>Weather Dashboard</h1>
+</div>
+</header>
+
+<main class="has-background-info pt-4" id="main-content">
+<div id="main-content-wrap">
+<!--Welcome Message/App Instructions-->
+<section id="Welcome">
+<div class="container mt-6">
+<div class="notification is-white">
+<div class="content">
+<h2 class="has-text-centered">Welcome to the Weather Dashboard!</h2>
+<p class="has-text-centered">Simply enter the city you want to see the weather outlook for and click submit to view its 5 day forecast.</p>
+<!-- Search Bar to Enter City Name -->
+<section id="searchbar">
+<form class="mb-6 is-flex is-justify-content-center is-align-items-center">
+<div class="field has-addons">
+<div class="control">
+<input class="input mb-2" type="text" id="search-input" placeholder="Enter City">
+</div>
+<div class="control">
+<input class="button is-info" type="submit" value="See Forecast">
+</div>
+</div>
+</form> 
+</section>
+</div> 
+</div>
+</div>
+</section>
+</div>
+
+</main>
+<!-- Link to JavaScript File -->
+<script src="./Assets/js/script.js"></script>
+</body>
+</html>
